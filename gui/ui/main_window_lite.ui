@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>596</width>
-    <height>320</height>
+    <height>323</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -203,110 +203,6 @@ QPushButton:pressed {
         </widget>
        </item>
        <item>
-        <spacer name="verticalSpacer_4">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Preferred</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_movement">
-         <property name="styleSheet">
-          <string notr="true">QPushButton{
-	border-style: solid;
-	border-top-color: transparent;
-	border-right-color: transparent;
-	border-left-color: transparent;
-	border-bottom-color: transparent;
-	border-width: 1px;
-	border-style: solid;
-	color:rgb(242, 250, 253);
-	padding: 2px;
-	background-color:#60669B
-}
-QPushButton:hover{
-	border-style: solid;
-	border-top-color: transparent;
-	border-right-color: transparent;
-	border-left-color: transparent;
-	border-bottom-width: 1px;
-	border-style: solid;
-	color: rgb(255, 255, 255);
-	padding-bottom: 2px;
-	background-color: #3498DB;
-}
-QPushButton:pressed {
-       background-color: #2980B9;
-       border-color: #007bff;
- }</string>
-         </property>
-         <property name="text">
-          <string>动作</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="verticalSpacer_5">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Preferred</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_prevent">
-         <property name="styleSheet">
-          <string notr="true">QPushButton{
-	border-style: solid;
-	border-top-color: transparent;
-	border-right-color: transparent;
-	border-left-color: transparent;
-	border-bottom-color: transparent;
-	border-width: 1px;
-	border-style: solid;
-	color:rgb(242, 250, 253);
-	padding: 2px;
-	background-color:#60669B
-}
-QPushButton:hover{
-	border-style: solid;
-	border-top-color: transparent;
-	border-right-color: transparent;
-	border-left-color: transparent;
-	border-bottom-width: 1px;
-	border-style: solid;
-	color: rgb(255, 255, 255);
-	padding-bottom: 2px;
-	background-color: #3498DB;
-}
-QPushButton:pressed {
-       background-color: #2980B9;
-       border-color: #007bff;
- }</string>
-         </property>
-         <property name="text">
-          <string>防护</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <spacer name="verticalSpacer_2">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -374,7 +270,7 @@ QPushButton:pressed {
           <number>1</number>
          </property>
          <property name="currentIndex">
-          <number>4</number>
+          <number>6</number>
          </property>
          <widget class="QWidget" name="page_home">
           <property name="sizePolicy">
@@ -943,18 +839,26 @@ QPushButton:pressed {
             <number>0</number>
            </property>
            <item>
-            <widget class="QFrame" name="frame_movement">
+            <widget class="QScrollArea" name="scrollArea">
              <property name="styleSheet">
-              <string notr="true">QFrame{
-    background-color: #EEF1F7
+              <string notr="true">QWidget {
+	background-color: #EEF1F7 ;
+	border:none
 }</string>
              </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+             <property name="widgetResizable">
+              <bool>true</bool>
              </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
+             <widget class="QWidget" name="scrollAreaWidgetContents_2">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>98</width>
+                <height>28</height>
+               </rect>
+              </property>
+             </widget>
             </widget>
            </item>
           </layout>
@@ -977,9 +881,12 @@ QPushButton:pressed {
             <number>0</number>
            </property>
            <item>
-            <widget class="QScrollArea" name="scrollArea">
+            <widget class="QScrollArea" name="scrollArea_prevent">
              <property name="styleSheet">
-              <string notr="true">QWidget { background-color: #EEF1F7 }</string>
+              <string notr="true">QWidget {
+	background-color: #EEF1F7 ;
+	border:none
+}</string>
              </property>
              <property name="horizontalScrollBarPolicy">
               <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -992,8 +899,8 @@ QPushButton:pressed {
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>473</width>
-                <height>316</height>
+                <width>98</width>
+                <height>28</height>
                </rect>
               </property>
              </widget>
@@ -1116,52 +1023,52 @@ QPushButton:pressed {
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QTimeEdit" name="timeEdit">
+                  <widget class="QTimeEdit" name="timeEdit_time">
                    <property name="displayFormat">
                     <string>hh:mm:ss</string>
                    </property>
                   </widget>
                  </item>
                  <item row="2" column="0">
-                  <widget class="QLabel" name="label_pace">
+                  <widget class="QLabel" name="label_speed">
                    <property name="text">
                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;速度&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                   </widget>
                  </item>
                  <item row="2" column="1">
-                  <widget class="QLineEdit" name="lineEdit"/>
+                  <widget class="QLineEdit" name="lineEdit_speed"/>
                  </item>
                  <item row="3" column="0">
-                  <widget class="QLabel" name="label_2">
+                  <widget class="QLabel" name="label_unit">
                    <property name="text">
                     <string>单位</string>
                    </property>
                   </widget>
                  </item>
                  <item row="3" column="1">
-                  <widget class="QRadioButton" name="radioButton">
+                  <widget class="QRadioButton" name="radioButton_pace">
                    <property name="text">
                     <string>配速(min/km)</string>
                    </property>
                   </widget>
                  </item>
                  <item row="4" column="1">
-                  <widget class="QRadioButton" name="radioButton_2">
+                  <widget class="QRadioButton" name="radioButton_hourSpeed">
                    <property name="text">
                     <string>时速(km/h)</string>
                    </property>
                   </widget>
                  </item>
                  <item row="5" column="1">
-                  <widget class="QRadioButton" name="radioButton_3">
+                  <widget class="QRadioButton" name="radioButton_lapSpeed">
                    <property name="text">
                     <string>圈速(s/400m)</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="6" column="0" colspan="2">
-                  <widget class="QFrame" name="frame">
+                 <item row="7" column="0" colspan="2">
+                  <widget class="QFrame" name="frame_divisionLine">
                    <property name="styleSheet">
                     <string notr="true">QFrame{
 	color: rgb(96, 102, 155);
@@ -1176,41 +1083,66 @@ QPushButton:pressed {
                    </property>
                   </widget>
                  </item>
-                 <item row="7" column="0">
-                  <widget class="QLabel" name="label_3">
+                 <item row="8" column="0">
+                  <widget class="QLabel" name="label_pace">
                    <property name="text">
                     <string>配速</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="7" column="1">
-                  <widget class="QLineEdit" name="lineEdit_2"/>
+                 <item row="8" column="1">
+                  <widget class="QLineEdit" name="lineEdit_pace"/>
                  </item>
-                 <item row="8" column="0">
-                  <widget class="QLabel" name="label_4">
+                 <item row="9" column="0">
+                  <widget class="QLabel" name="label_hourSpeed">
                    <property name="text">
                     <string>时速</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="8" column="1">
-                  <widget class="QLineEdit" name="lineEdit_3">
+                 <item row="9" column="1">
+                  <widget class="QLineEdit" name="lineEdit_hourSpeed">
                    <property name="readOnly">
                     <bool>true</bool>
                    </property>
                   </widget>
                  </item>
-                 <item row="9" column="0">
-                  <widget class="QLabel" name="label_5">
+                 <item row="10" column="0">
+                  <widget class="QLabel" name="label_lapSpeed">
                    <property name="text">
                     <string>圈速</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="9" column="1">
-                  <widget class="QLineEdit" name="lineEdit_4">
+                 <item row="10" column="1">
+                  <widget class="QLineEdit" name="lineEdit_lapSpeed">
                    <property name="readOnly">
                     <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="0" colspan="2">
+                  <widget class="QPushButton" name="pushButton_convert_confirm">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    color:rgb(242, 250, 253);
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+QPushButton:pressed {
+    background-color: #D8D8FA;
+}
+
+QPushButton {
+   background-color:#60669B;
+}
+
+QPushButton:pressed {
+    background-color: #B0E0E6;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>确认</string>
                    </property>
                   </widget>
                  </item>
@@ -1222,7 +1154,7 @@ QPushButton:pressed {
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="page_forecast">
+         <widget class="QWidget" name="page_forecast_1">
           <layout class="QVBoxLayout" name="verticalLayout_11">
            <property name="spacing">
             <number>0</number>
@@ -1247,11 +1179,251 @@ QPushButton:pressed {
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
+             <layout class="QFormLayout" name="formLayout_2">
+              <item row="0" column="0" colspan="2">
+               <widget class="QLabel" name="label_tips">
+                <property name="text">
+                 <string>请确认您最近的最好成绩(没有进行过测试的项目不用填写)</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_1km">
+                <property name="text">
+                 <string>1km</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QTimeEdit" name="timeEdit_1km">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_3km">
+                <property name="text">
+                 <string>3km</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QTimeEdit" name="timeEdit_3km">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_5km">
+                <property name="text">
+                 <string>5km</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QTimeEdit" name="timeEdit_5km">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_10km">
+                <property name="text">
+                 <string>10km</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QTimeEdit" name="timeEdit_10km">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_halfMarathon">
+                <property name="text">
+                 <string>半马</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QTimeEdit" name="timeEdit_halfMarathon">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_marathon">
+                <property name="text">
+                 <string>全马</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QTimeEdit" name="timeEdit_marathon">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="1">
+               <widget class="QPushButton" name="pushButton_forecast_confirm">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    color:rgb(242, 250, 253);
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+QPushButton:pressed {
+    background-color: #D8D8FA;
+}
+
+QPushButton {
+   background-color:#60669B;
+}
+
+QPushButton:pressed {
+    background-color: #B0E0E6;
+}</string>
+                </property>
+                <property name="text">
+                 <string>确认</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="page_generate_plan">
+         <widget class="QWidget" name="page_forecast_2">
+          <layout class="QVBoxLayout" name="verticalLayout_17">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QFrame" name="frame_forecast_2">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QFormLayout" name="formLayout_3">
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_1km_2">
+                <property name="text">
+                 <string>1km</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_3km_2">
+                <property name="text">
+                 <string>3km</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_5km_2">
+                <property name="text">
+                 <string>5km</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_10km_2">
+                <property name="text">
+                 <string>10km</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_halfMarathon_2">
+                <property name="text">
+                 <string>半马</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_marathon_2">
+                <property name="text">
+                 <string>全马</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QTimeEdit" name="timeEdit_1km_2">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QTimeEdit" name="timeEdit_3km_2">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QTimeEdit" name="timeEdit_5km_2">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QTimeEdit" name="timeEdit_10km_2">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QTimeEdit" name="timeEdit_halfMarathon_2">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QTimeEdit" name="timeEdit_Marathon">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" colspan="2">
+               <widget class="QLabel" name="label_tips_2">
+                <property name="text">
+                 <string>预测结果</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_generatePlan">
           <layout class="QVBoxLayout" name="verticalLayout_12">
            <property name="spacing">
             <number>0</number>
@@ -1269,13 +1441,212 @@ QPushButton:pressed {
             <number>0</number>
            </property>
            <item>
-            <widget class="QFrame" name="frame_generate_plan">
+            <widget class="QFrame" name="frame_generatePlan">
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
+             <layout class="QFormLayout" name="formLayout_4">
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>目标距离</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string>目标时间</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QTimeEdit" name="timeEdit">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="comboBox">
+                <item>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>1km</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>3km</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>5km</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>10km</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>半马</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>全马</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="5" column="0" colspan="2">
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>当前能力</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" colspan="2">
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>目标设置</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>1km</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>3km</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>5km</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="0">
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>10km</string>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="0">
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>半马</string>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="0">
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string>全马</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QTimeEdit" name="timeEdit_2">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="1">
+               <widget class="QTimeEdit" name="timeEdit_3">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="1">
+               <widget class="QTimeEdit" name="timeEdit_4">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="1">
+               <widget class="QTimeEdit" name="timeEdit_5">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="1">
+               <widget class="QTimeEdit" name="timeEdit_6">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="1">
+               <widget class="QTimeEdit" name="timeEdit_7">
+                <property name="displayFormat">
+                 <string>hh:mm:ss</string>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="1">
+               <widget class="QPushButton" name="pushButton">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    color:rgb(242, 250, 253);
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+QPushButton:pressed {
+    background-color: #D8D8FA;
+}
+
+QPushButton {
+   background-color:#60669B;
+}
+
+QPushButton:pressed {
+    background-color: #B0E0E6;
+}</string>
+                </property>
+                <property name="text">
+                 <string>确认</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0" colspan="2">
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0" colspan="2">
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>

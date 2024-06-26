@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QMainWindow
 
-from gui.py.main_window import Ui_MainWindow
+from gui.py.main_window_lite import Ui_MainWindow
 
 
 class myWindow(QMainWindow, Ui_MainWindow):
@@ -29,8 +29,7 @@ class myWindow(QMainWindow, Ui_MainWindow):
         初始化页面切换的辅助函数列表。
         """
         self.pageChangeFunctions = [
-            self.btnHome, self.btnCalc, self.btnPlan,
-            self.btnMovement, self.btnPrevent, self.btnConversaion,
+            self.btnHome, self.btnCalc, self.btnPlan,self.btnConversaion,
             # self.btnForecast, self.btnForecast2
         ]
 
@@ -40,8 +39,7 @@ class myWindow(QMainWindow, Ui_MainWindow):
         """
         buttons = [
             self.pushButton_home, self.pushButton_clac,
-            self.pushButton_plan, self.pushButton_movement,
-            self.pushButton_prevent, self.pushButton_conversaion,
+            self.pushButton_plan,  self.pushButton_conversaion,
             # self.pushButton_forecast, self.pushButton_forecast,
             self.pushButton_forecast
         ]
@@ -72,17 +70,6 @@ class myWindow(QMainWindow, Ui_MainWindow):
     def btnPlan(self):
         self.setPage(2)
 
-    def btnMovement(self):
-        self.setPage(3)
-
-    def btnPrevent(self):
-        self.setPage(4)
-
     def btnConversaion(self):
         self.setPage(5)
 
-    # def btnForecast1(self):
-    #     self.setPage(6)
-    #
-    # def btnForecast2(self):
-    #     self.setPage(7)

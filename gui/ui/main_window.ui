@@ -1226,7 +1226,25 @@ QPushButton:pressed {
                   </widget>
                  </item>
                  <item row="6" column="0" colspan="2">
-                  <widget class="QPushButton" name="pushButton_2">
+                  <widget class="QPushButton" name="pushButton_convert_confirm">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    color:rgb(242, 250, 253);
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+QPushButton:pressed {
+    background-color: #D8D8FA;
+}
+
+QPushButton {
+   background-color:#60669B;
+}
+
+QPushButton:pressed {
+    background-color: #B0E0E6;
+}</string>
+                   </property>
                    <property name="text">
                     <string>确认</string>
                    </property>
@@ -1358,7 +1376,25 @@ QPushButton:pressed {
                </widget>
               </item>
               <item row="7" column="1">
-               <widget class="QPushButton" name="pushButton_confirm">
+               <widget class="QPushButton" name="pushButton_forecast_confirm">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    color:rgb(242, 250, 253);
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+QPushButton:pressed {
+    background-color: #D8D8FA;
+}
+
+QPushButton {
+   background-color:#60669B;
+}
+
+QPushButton:pressed {
+    background-color: #B0E0E6;
+}</string>
+                </property>
                 <property name="text">
                  <string>确认</string>
                 </property>
@@ -1542,7 +1578,7 @@ QPushButton:pressed {
                <widget class="QComboBox" name="comboBox">
                 <item>
                  <property name="text">
-                  <string> </string>
+                  <string/>
                  </property>
                 </item>
                 <item>
@@ -1677,6 +1713,24 @@ QPushButton:pressed {
               </item>
               <item row="12" column="1">
                <widget class="QPushButton" name="pushButton">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    color:rgb(242, 250, 253);
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+QPushButton:pressed {
+    background-color: #D8D8FA;
+}
+
+QPushButton {
+   background-color:#60669B;
+}
+
+QPushButton:pressed {
+    background-color: #B0E0E6;
+}</string>
+                </property>
                 <property name="text">
                  <string>确认</string>
                 </property>
@@ -1685,14 +1739,14 @@ QPushButton:pressed {
               <item row="4" column="0" colspan="2">
                <widget class="QLabel" name="label_12">
                 <property name="text">
-                 <string> </string>
+                 <string/>
                 </property>
                </widget>
               </item>
               <item row="3" column="0" colspan="2">
                <widget class="QLabel" name="label_13">
                 <property name="text">
-                 <string> </string>
+                 <string/>
                 </property>
                </widget>
               </item>
